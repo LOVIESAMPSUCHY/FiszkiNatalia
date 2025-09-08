@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Fiszki – Pozytywizm (Mobile)</title>
+<title>BUZKA</title>
 <style>
   :root{
     --bg:#0d0e12; --bg2:#141520; --panel:#1a1b28; --fg:#f2f3f7; --muted:#b8bbd0;
@@ -116,8 +116,8 @@
 <body>
 <header>
   <div class="wrap">
-    <h1>Fiszki – Pozytywizm</h1>
-    <div class="sub">Mobile-first • kliknij kartę, by odwrócić • gesty „←/→” zmieniają fiszkę</div>
+    <h1>Fiszki</h1>
+    <div class="sub"></div>
 
     <div class="toolbar">
       <input id="q" type="search" placeholder="🔎 Szukaj…" aria-label="Szukaj" />
@@ -155,19 +155,19 @@
   <button class="btn" id="prev" aria-label="Poprzednia">←</button>
   <button class="btn ok" id="know" aria-label="Znam">Znam ✓</button>
   <button class="btn warn" id="again" aria-label="Powtórz">Powtórz ↺</button>
-  <button class="btn ghost wide" id="flip">Odwróć (stuknij kartę)</button>
+  <button class="btn ghost wide" id="flip">Odwróć </button>
   <div class="stats" id="stats">0/0 • 0% opanowane</div>
 </div>
 
 <script>
 /** DANE FISZEK **/
 const CARDS = [
-  {tag:'Ramy epoki', q:'Ramy czasowe pozytywizmu w Polsce?', a:'1864 (po powstaniu styczniowym) – ok. 1890/1895 (Młoda Polska na horyzoncie).'},
-  {tag:'Hasła społeczne', q:'Praca u podstaw – definicja', a:'Podnoszenie poziomu najniższych warstw: oświata, samopomoc, edukacja.'},
-  {tag:'Hasła społeczne', q:'Praca organiczna – na czym polega?', a:'Społeczeństwo jak organizm – współpraca wszystkich warstw dla rozwoju.'},
-  {tag:'Hasła społeczne', q:'Asymilacja Żydów – sens w pozytywizmie', a:'Włączenie w życie gospodarcze i kulturalne, edukacja, wspólna praca.'},
-  {tag:'Hasła społeczne', q:'Emancypacja kobiet – co postulowano?', a:'Równe prawa: dostęp do nauki i pracy, samodzielność ekonomiczna.'},
-  {tag:'Filozofia', q:'Scjentyzm (August Comte) – istota', a:'Nauka (ścisła i przyrodnicza) jako najpewniejsze źródło wiedzy i postępu.'},
+  {tag:'', q:'Ramy czasowe pozytywizmu w Polsce?', a:'1864 (po powstaniu styczniowym) – ok. 1890/1895 (Młoda Polska na horyzoncie).'},
+  {tag:'', q:'Praca u podstaw – definicja', a:'Podnoszenie poziomu najniższych warstw: oświata, samopomoc, edukacja.'},
+  {tag:'', q:'Praca organiczna – na czym polega?', a:'Społeczeństwo jak organizm – współpraca wszystkich warstw dla rozwoju.'},
+  {tag:'', q:'Asymilacja Żydów – sens w pozytywizmie', a:'Włączenie w życie gospodarcze i kulturalne, edukacja, wspólna praca.'},
+  {tag:'', q:'Emancypacja kobiet – co postulowano?', a:'Równe prawa: dostęp do nauki i pracy, samodzielność ekonomiczna.'},
+  {tag:'', q:'Scjentyzm (August Comte) – istota', a:'Nauka (ścisła i przyrodnicza) jako najpewniejsze źródło wiedzy i postępu.'},
   {tag:'Filozofia', q:'Utylitaryzm (J. S. Mill) – zasada', a:'„Największe szczęście największej liczby” – kryterium użyteczności.'},
   {tag:'Filozofia', q:'Empiryzm – co głosi?', a:'Poznajemy świat poprzez doświadczenie i obserwację.'},
   {tag:'Kierunki', q:'Realizm – definicja', a:'Wierne odzwierciedlenie rzeczywistości; typowość postaci i sytuacji.'},
@@ -185,9 +185,9 @@ const CARDS = [
   {tag:'Potop', q:'Andrzej Kmicic – przemiana', a:'Od awanturnika do patrioty (Babinicz); motyw odkupienia.'},
   {tag:'Potop', q:'Archaizacja w „Potopie” – rola', a:'Buduje klimat epoki i wiarygodność (składnia/leksyka dawna).'},
   {tag:'Potop', q:'Motywy przewodnie', a:'Patriotyzm, zdrada/wierność, honor rycerski, miłość, obrona Jasnej Góry.'},
-  {tag:'Kontrolne', q:'Hasła programowe pozytywizmu – 4', a:'Praca u podstaw, praca organiczna, emancypacja kobiet, asymilacja Żydów (+ scjentyzm, utylitaryzm).'},
-  {tag:'Kontrolne', q:'Realizm vs naturalizm – 1 zdanie', a:'Realizm – wierne odtworzenie; naturalizm – determinizm i „biologia” człowieka.'},
-  {tag:'Kontrolne', q:'Dlaczego odrzucano powstania?', a:'Stawiano na realny rozwój: oświata, gospodarka, praca – zamiast zrywów.'}
+  {tag:'', q:'Hasła programowe pozytywizmu – 4', a:'Praca u podstaw, praca organiczna, emancypacja kobiet, asymilacja Żydów (+ scjentyzm, utylitaryzm).'},
+  {tag:'', q:'Realizm vs naturalizm – 1 zdanie', a:'Realizm – wierne odtworzenie; naturalizm – determinizm i „biologia” człowieka.'},
+  {tag:'e', q:'Dlaczego odrzucano powstania?', a:'Stawiano na realny rozwój: oświata, gospodarka, praca – zamiast zrywów.'}
 ];
 
 /** STAN / POSTĘPY **/
